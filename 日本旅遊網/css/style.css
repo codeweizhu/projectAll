@@ -1,0 +1,292 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+body img.fixed-image {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -15;
+}
+body header {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 2 1 400px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+body header section.logo {
+  display: flex;
+  align-items: center;
+}
+body header section.logo h1 {
+  font-size: 2.5rem;
+}
+body header section.logo img {
+  width: 5vh;
+  height: 5vh;
+}
+body header nav {
+  flex: 5 1 400px;
+}
+body header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+}
+body header nav ul li {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin-right: 2rem;
+}
+body header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.25s;
+}
+body header nav ul li a i {
+  padding: 0.5em;
+}
+body header nav ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+body main section.background-img {
+  display: flex;
+  background-image: url("../images/日本櫻花.jpg");
+  min-height: 55vh;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body main section.background-img div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 55vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+body main section.background-img h3 {
+  font-size: 2rem;
+  color: whitesmoke;
+  z-index: 2;
+}
+body main section.info-circles {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 1.5rem 0;
+}
+body main section.info-circles h3 {
+  color: black;
+  font-size: 2.2rem;
+  padding-bottom: 1rem;
+}
+body main section.info-circles div.circles {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main section.info-circles div.circles div.single-circle img {
+  border-radius: 50%;
+  border: 3px solid rgb(223, 200, 223);
+  height: 12vw;
+}
+body main section.info-circles div.circles div.single-circle img:hover {
+  border: 3px solid red;
+  padding: 0.25rem;
+  transition: all 0.25s;
+  box-shadow: 0 0 12px teal;
+}
+body main section.info-circles div.circles div.single-circle p {
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+body main section.empty-container {
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.empty-container a {
+  color: whitesmoke;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+}
+body main section.empty-container a:hover {
+  color: rgb(58, 58, 114);
+  font-size: 2.15rem;
+}
+body main section.google-map {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+body main section.google-map h3 {
+  text-align: center;
+  color: black;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+body main section.google-map iframe {
+  height: 27vh;
+}
+body footer {
+  background-color: rgb(255, 255, 255);
+  min-height: 20vh;
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255),
+    rgba(180, 178, 178, 0.774)
+  );
+}
+body footer section.logo {
+  flex: 1 1 100px;
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgba(122, 121, 121, 0.726),
+    rgba(255, 255, 255, 0)
+  );
+  justify-content: center;
+}
+body footer section.logo div.logo-allPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: move 10s linear infinite;
+}
+body footer section.logo div.logo-allPart h3 {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+body footer section.logo div.logo-allPart a img {
+  height: 10vw;
+  width: 10vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin-top: 1rem;
+}
+body footer section.links {
+  flex: 3 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+}
+body footer section.links div.content-link p {
+  font-size: 1.2rem;
+  padding: 0.35rem 0;
+  font-weight: bold;
+}
+body footer section.links div.content-link p i {
+  padding-right: 1rem;
+  font-size: 1.3rem;
+}
+body footer section.links div.community {
+  margin-top: 2rem;
+  display: flex;
+}
+body footer section.links div.community a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.2rem;
+  margin-right: 3rem;
+}
+body footer section.links div.community a img {
+  width: 3vw;
+  height: 3vh;
+  margin-right: 0.3rem;
+}
+
+@keyframes move {
+  45% {
+    transform: translateX(30%);
+  }
+  90% {
+    transform: translateX(-30%);
+  }
+}
+@media screen and (max-width: 700px) {
+  body header {
+    justify-content: center;
+  }
+  body header section.logo {
+    flex-direction: column;
+  }
+  body header section.logo img {
+    margin: 1.5rem 0 1rem 0;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    border: 4px solid rgb(184, 171, 171);
+  }
+  body header section.logo h1 {
+    font-size: 2rem;
+    color: rgb(100, 97, 97);
+  }
+  body header nav {
+    margin-top: 2rem;
+  }
+  body header nav ul {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body header nav ul li a {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  body header nav ul li a i {
+    font-size: 1.3rem;
+  }
+  body main section.background-img h3 {
+    font-size: 1.6rem;
+  }
+  body main section.info-circles h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  body main section.info-circles div.circles div.single-circle a {
+    display: block;
+  }
+  body footer section.logo div.logo-allPart h3 {
+    font-size: 2.3rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+  }
+  body footer section.logo div.logo-allPart a img {
+    width: 6vh;
+    height: 6vh;
+  }
+  body footer section.links div.content-link p {
+    font-size: 1rem;
+    margin: auto 0;
+  }
+  body footer section.links div.community a img {
+    width: 2.5vh;
+    height: 2.5vh;
+  }
+} /*# sourceMappingURL=style.css.map */

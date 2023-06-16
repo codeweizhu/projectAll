@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日本旅遊網</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <img class="fixed-image" src="./images/富士山2.jpg" alt="fixed-image" />
+
+    <header>
+      <section class="logo">
+        <img id="top" src="./images/Logo_walk.svg" alt="日本旅遊網Logo" />
+        <h1>2023日本旅遊推薦</h1>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-plane"></i>日本旅遊</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-right-to-bracket"></i>會員登入</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-sharp fa-solid fa-calendar"></i>預約行程</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-phone"></i>聯絡我們</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 中間圖片 -->
+    <main>
+      <section class="background-img">
+        <!-- 製作遮罩 -->
+        <div class="filter"></div>
+        <h3>空閒生活，特殊假期，安排一趟旅行</h3>
+      </section>
+
+      <section class="info-circles">
+        <h3>熱門主題</h3>
+        <div class="circles">
+          <div class="single-circle">
+            <a href="#"
+              ><img src="./images/北海道雪景.jpg" alt="北海道雪景"
+            /></a>
+            <p>北海道雪景</p>
+          </div>
+          <div class="single-circle">
+            <a href="#"><img src="./images/日本壽司.jpg" alt="日本壽司" /></a>
+            <p>著名美食</p>
+          </div>
+          <div class="single-circle">
+            <a href="#"><img src="./images/富士山.jpg" alt="富士山" /></a>
+            <p>富士山與溫泉</p>
+          </div>
+          <div class="single-circle">
+            <a href="#"><img src="./images/清水寺.jpg" alt="清水寺" /></a>
+            <p>清水古寺</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="empty-container">
+        <a href="#">尋找最佳行程方案</a>
+      </section>
+
+      <section class="google-map">
+        <h3>日本地理位置</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6892340.14993791!2d142.2486817739678!3d34.966781625585135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2z5pel5pys!5e0!3m2!1szh-TW!2stw!4v1676455753428!5m2!1szh-TW!2stw"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <section class="logo">
+        <div class="logo-allPart">
+          <h3>日本旅遊推薦</h3>
+          <a href="#top"
+            ><img src="./images/Logo_walk.svg" alt="日本旅遊網Logo"
+          /></a>
+        </div>
+      </section>
+
+      <section class="links">
+        <div class="content-link">
+          <p>
+            <i class="fa-sharp fa-solid fa-phone-volume"></i>連絡電話 : (02)
+            2722 - 6666
+          </p>
+          <p>
+            <i class="fa-solid fa-house"></i>總公司 :台北市大安區安和路三段999號
+          </p>
+        </div>
+
+        <div class="community">
+          <a href="#"><img src="./Icons/facebook.svg" alt="Facebook-icon" /></a>
+          <a href="#"
+            ><img src="./Icons/instagram.svg" alt="Instagram-icon"
+          /></a>
+          <a href="#"><img src="./Icons/twitter.svg" alt="Twitter-icon" /></a>
+          <a href="#"><img src="./Icons/youtube.svg" alt="Youtube-icon" /></a>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+      setInterval(() => {
+        let getNext = document.querySelector("section.background-img");
+        if (getNext.style.backgroundImage == 'url("../images/日本櫻花.jpg")') {
+          getNext.style.backgroundImage = 'url("../images/京都古城.jpg")';
+        } else if (
+          getNext.style.backgroundImage == 'url("../images/京都古城.jpg")'
+        ) {
+          getNext.style.backgroundImage = 'url("../images/大阪街頭.jpg")';
+        } else {
+          getNext.style.backgroundImage = 'url("../images/日本櫻花.jpg")';
+        }
+      }, 5500);
+    </script>
+  </body>
+</html>
