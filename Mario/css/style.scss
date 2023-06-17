@@ -736,46 +736,70 @@ header {
 }
 
 //跑馬燈
-.marquee {
-  margin-top: 5rem;
-  // border: 2px solid #fff;
-  position: relative;
-  height: 350px;
-  // border: 1px solid #000000;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include phone() {
-    height: 200px;
-    margin-top: 2rem;
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
   }
-  .list {
-    left: 0px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-(20% * 5));
+  }
+}
+
+@include media(1024) {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-(25% * 5));
+    }
+  }
+}
+@include media(768) {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-(33.33% * 5));
+    }
+  }
+}
+
+#marquee {
+  padding: 50px 0;
+  width: 100%;
+  .view {
+    overflow: hidden;
+    width: 100%;
+  }
+  .pic-container {
     display: flex;
-    position: absolute;
+    animation: marquee 60s infinite linear;
+    .pic {
+      flex-basis: 20%;
+      flex-shrink: 0;
+      margin: 0 1rem;
+      img {
+        object-fit: cover;
+      }
+      @include media(1024) {
+        flex-basis: 28%;
+      }
+      @include media(768) {
+        flex-basis: 33.33%;
+      }
+    }
   }
-  .photo {
-    width: 350px;
-    height: 350px;
-    // border: 3px solid red;
-    margin: 0 13px;
-    @include pc2() {
-      height: 300px;
-    }
-    @include pad() {
-      height: 280px;
-    }
-    @include phone() {
-      height: 200px;
-      width: 200px;
-      margin: 0 5px;
-    }
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
+  img {
+    width: 100%;
+    vertical-align: middle;
   }
 }
 
@@ -792,15 +816,17 @@ header {
     #ffffff 20px
   );
   padding: 0.5rem;
-  margin-top: 3rem;
-  align-items: center;
-  justify-content: space-between;
-
+  margin: 1rem auto;
+  @include phone() {
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
   .gameArchives,
   .characters {
-    margin-bottom: 5rem;
     padding: 0.5rem;
     flex: 1;
+    display: flex;
+    justify-content: center;
     @include pc() {
       margin-bottom: 1.5rem;
     }
@@ -809,7 +835,7 @@ header {
     }
     img {
       object-fit: cover;
-      width: 100%;
+      width: 90%;
     }
   }
 }

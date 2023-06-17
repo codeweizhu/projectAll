@@ -222,42 +222,39 @@
       </section>
 
       <!-- 跑馬燈 -->
-      <section>
-        <div class="marquee">
-          <div class="list">
-            <div class="photo">
+      <section id="marquee">
+        <div class="view">
+          <div class="pic-container">
+            <div class="pic">
               <img src="./images/img-baseball.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-golf.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-kart.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-tennis.png" alt="" />
             </div>
-            <!--             <div class="photo">
+            <div class="pic">
               <img src="./images/img-baseball.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-golf.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-kart.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
               <img src="./images/img-tennis.png" alt="" />
             </div>
-            <div class="photo">
+            <div class="pic">
+              <img src="./images/img-baseball.png" alt="" />
+            </div>
+            <div class="pic">
               <img src="./images/img-golf.png" alt="" />
             </div>
-            <div class="photo">
-              <img src="./images/img-kart.png" alt="" />
-            </div>
-            <div class="photo"> 
-              <img src="./images/img-tennis.png" alt="" />
-            </div> -->
           </div>
         </div>
       </section>
@@ -305,133 +302,6 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
-    <script>
-      /*       function load() {
-        let list = document.querySelector(".list");
-        let box = document.querySelector(".box");
-        let left = list.style.left;
-        let timer;
-        function move() {
-          clearInterval(timer);
-          timer = setInterval((env) => {
-            left = left - 1;
-            console.log(list.clientLeft);
-            if (left == -(6 * 200 + 2 * 24)) {
-              left = 0;
-            }
-            list.style.left = left + "px";
-          }, 10);
-        }
-
-        move();
-        box.onmouseover = function () {
-          clearInterval(timer);
-        };
-
-        box.onmouseleave = function () {
-          move();
-        };
-      }
-      document.addEventListener("DOMContentLoaded", load); */
-      /* function load() {
-        let list = document.querySelector(".list");
-        let images = Array.from(list.getElementsByTagName("img"));
-        let numImages = images.length;
-        let box = document.querySelector(".box");
-        let imageWidth = box.offsetWidth;
-        let totalWidth = numImages * imageWidth;
-        let left = 0;
-        let timer;
-
-        // 设置跑马灯容器的宽度
-        list.style.width = totalWidth + "px";
-
-        function move() {
-          clearInterval(timer);
-          timer = setInterval(() => {
-            left--;
-            if (left <= -imageWidth) {
-              list.appendChild(list.firstElementChild);
-              left += imageWidth;
-            }
-            list.style.left = left + "px";
-          }, 10);
-        }
-
-        // 仅当有图片时才启动跑马灯效果
-        if (numImages > 0) {
-          move();
-        }
-
-        box.onmouseover = function () {
-          clearInterval(timer);
-        };
-
-        box.onmouseleave = function () {
-          if (numImages > 0) {
-            move();
-          }
-        };
-      }
-
-      document.addEventListener("DOMContentLoaded", load); */
-
-      function load() {
-        let list = document.querySelector(".list");
-        let images = Array.from(list.getElementsByTagName("img"));
-        let numImages = images.length;
-        let box = document.querySelector(".box");
-        let imageWidth = box.offsetWidth;
-        let totalWidth = numImages * imageWidth;
-        let left = 0;
-        let timer;
-        let preloadImages = [];
-        let preloadIndex = 0;
-
-        // 设置跑马灯容器的宽度
-        list.style.width = totalWidth + "px";
-
-        function move() {
-          clearInterval(timer);
-          timer = setInterval(() => {
-            left--;
-            if (left <= -imageWidth) {
-              list.appendChild(list.firstElementChild);
-              left += imageWidth;
-              preloadNextImage();
-            }
-            list.style.left = left + "px";
-          }, 10);
-        }
-
-        function preloadNextImage() {
-          let nextIndex = (preloadIndex + numImages) % numImages;
-          let nextImage = images[nextIndex];
-          let preloadImage = new Image();
-          preloadImage.src = nextImage.src;
-          preloadImages[preloadIndex] = preloadImage;
-          preloadIndex = (preloadIndex + 1) % numImages;
-        }
-
-        // 仅当有图片时才启动跑马灯效果
-        if (numImages > 0) {
-          preloadNextImage();
-          move();
-        }
-
-        box.onmouseover = function () {
-          clearInterval(timer);
-        };
-
-        box.onmouseleave = function () {
-          if (numImages > 0) {
-            move();
-          }
-        };
-      }
-
-      document.addEventListener("DOMContentLoaded", load);
-    </script>
 
     <!-- navbar -->
     <script>
@@ -448,7 +318,7 @@
           opcaUl.classList.add("barOut");
         }
       } */
-      
+
       /*Jquery*/
       $(document).ready(function () {
         let $barMenu = $("#barMenu");
