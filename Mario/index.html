@@ -300,6 +300,11 @@
 
       <p class="text_logo">© Nintendo</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script>
       /*       function load() {
         let list = document.querySelector(".list");
@@ -430,7 +435,7 @@
 
     <!-- navbar -->
     <script>
-      let barMenu = document.querySelector("#barMenu");
+      /*      let barMenu = document.querySelector("#barMenu");
       let opcaUl = document.querySelector("#opcaUl");
       barMenu.addEventListener("click", toggleMenu);
 
@@ -442,7 +447,22 @@
           opcaUl.classList.remove("barIn");
           opcaUl.classList.add("barOut");
         }
-      }
+      } */
+      
+      /*Jquery*/
+      $(document).ready(function () {
+        let $barMenu = $("#barMenu");
+        let $opcaUl = $("#opcaUl");
+        $barMenu.on("click", toggleMenu);
+
+        function toggleMenu() {
+          if ($opcaUl.hasClass("barOut")) {
+            $opcaUl.removeClass("barOut").addClass("barIn");
+          } else {
+            $opcaUl.removeClass("barIn").addClass("barOut");
+          }
+        }
+      });
     </script>
   </body>
 </html>
