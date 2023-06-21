@@ -107,8 +107,7 @@ header .navbar .navlist ul li {
   height: 100%;
 }
 header .navbar .navlist ul li:hover {
-  color: red;
-  border-bottom: 4px solid red;
+  background-color: red;
 }
 header .navbar .navlist ul li img {
   margin-right: 0.2rem;
@@ -171,6 +170,7 @@ header #opcaUl {
     top: 0;
     left: 0;
     z-index: 200;
+    position: fixed;
   }
   header .phoneBar .bg {
     width: 90%;
@@ -178,11 +178,13 @@ header #opcaUl {
     margin: 2rem auto;
   }
   header .phoneBar .bg ul {
+    height: 100%;
     display: flex;
     font-size: 2.5rem;
     color: #000;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
   }
 }
 @media (max-width: 768px) and (max-width: 576px) {
@@ -192,29 +194,33 @@ header #opcaUl {
 }
 @media (max-width: 768px) {
   header .phoneBar .bg ul a .colorH {
-    width: 350px;
+    width: 250px;
     height: 80px;
-    border: 2px solid black;
+    border: 2px solid #545454;
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
     border-radius: 15px;
-    background-color: #eee9e9;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 @media (max-width: 768px) and (max-width: 576px) {
   header .phoneBar .bg ul a .colorH {
-    width: 250px;
+    width: 200px;
+    height: 65px;
+    font-size: 16px;
   }
 }
 @media (max-width: 768px) and (max-width: 390px) {
   header .phoneBar .bg ul a .colorH {
-    width: 220px;
+    width: 180px;
   }
 }
 @media (max-width: 768px) {
   header .phoneBar .bg ul a .colorH:hover {
-    background-color: red;
+    color: blue;
   }
 }
 @media (max-width: 768px) {
