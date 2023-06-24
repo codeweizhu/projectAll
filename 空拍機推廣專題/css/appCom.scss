@@ -1,0 +1,79 @@
+@import "./public.scss";
+$raduis: 15px;
+
+@mixin pc2() {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+header {
+  flex-wrap: nowrap;
+}
+body {
+  background-color: $web_bg;
+}
+main {
+  .banner {
+    width: 60%;
+    height: 35vh;
+    margin: 5rem auto 3rem;
+    @include pc() {
+      height: 40vh;
+    }
+    @include pc2() {
+      height: 50vh;
+      width: 70%;
+    }
+    @include pad() {
+      width: 85%;
+      height: 32vh;
+    }
+    @include phone() {
+      width: 90%;
+      height: 38vh;
+    }
+    @include phone2() {
+      height: 45vh;
+    }
+    .back-img {
+      background-image: url(../img/share曾文水庫-4.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      border-bottom-left-radius: 150px;
+      @include pad() {
+        background-image: url(../img/share南子吝-3.jpg);
+        border-top-right-radius: 150px;
+      }
+      @include phone() {
+        border-radius: 50px;
+        background-image: url(../img/share八斗子-4.jpg);
+      }
+      .text {
+        width: 30%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-bottom-left-radius: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include phone() {
+          width: 50%;
+          background-color: #0000006e;
+          border-radius: 50px 0 0 50px;
+        }
+        h1,
+        p {
+          color: #fff;
+        }
+        h1 {
+          margin-bottom: 3rem;
+        }
+        p {
+          font-size: $text_size-18px;
+        }
+      }
+    }
+  }
+}

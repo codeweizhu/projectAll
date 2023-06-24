@@ -1,0 +1,209 @@
+@import "./public.scss";
+
+@mixin backPo() {
+  background-size: cover;
+  background-position: center;
+}
+@mixin pc2() {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+$border-rus: 15px;
+main {
+  position: relative;
+  .bg-z {
+    background-image: url(../img/com安平軍港-3.jpg);
+    background-position: top center;
+    position: fixed;
+    z-index: -5;
+    width: 100%;
+    min-height: 100vh;
+    bottom: 0;
+    left: 0;
+    @include phone2() {
+      background-position: center;
+    }
+  }
+  .mask {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    left: 0;
+    top: 0;
+  }
+  section {
+    position: relative;
+    .banner {
+      background-image: url(../img/operatePic.png);
+      background-repeat: no-repeat;
+      @include backPo();
+      height: 40vh;
+      display: flex;
+      .title {
+        position: absolute;
+        top: 7vh;
+        left: 7%;
+        font-weight: text_weight-b;
+        @include phone() {
+          margin: 10% 0 0 5%;
+        }
+        h1,
+        p {
+          color: $text_color_w;
+          font-weight: $text_weight-b;
+          line-height: 1rem;
+        }
+        h1 {
+          font-size: $text_size-48px;
+          @include phone() {
+            font-size: 32px;
+          }
+        }
+        p {
+          font-size: $text_size-32px;
+          @include phone() {
+            font-size: 18px;
+          }
+        }
+      }
+      .text_word {
+        position: absolute;
+        width: 80%;
+        height: 40vh;
+        color: $text_color_w;
+        font-size: $text_size-18px;
+        border-radius: $border-rus;
+        top: 19rem;
+        left: 10%;
+        background-image: url(../img/share南子吝-3.jpg);
+        @include backPo();
+        @include phone() {
+          height: 315px;
+        }
+        p {
+          width: 80%;
+          line-height: 25px;
+          color: $text_color_w;
+          position: absolute;
+          top: 30%;
+          left: 10%;
+          @include pc() {
+            font-size: 18px;
+            line-height: 2rem;
+          }
+          @include pad() {
+            margin-top: -2rem;
+          }
+          @include phone() {
+            font-size: 16px;
+            margin-top: -4.8rem;
+            line-height: 1.5rem;
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+    .operate {
+      background-color: $web_bg;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .operate_box {
+        margin: 20rem 0 5rem 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        // 資訊欄&圖片
+        .operate_info {
+          margin-top: 3rem;
+          width: 405px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-radius: $border-rus;
+          background-color: #545454b2;
+          h1,
+          p {
+            color: $web_bg;
+          }
+          h1 {
+            font-size: $text_size-28px;
+            margin: 1rem auto 0;
+          }
+          p {
+            text-align: justify;
+            padding: 0 2rem;
+            font-size: $text_size-16px;
+          }
+          img {
+            @include phone() {
+              width: 95%;
+              margin: 20px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .box1,
+    .box2 {
+      display: flex;
+      justify-content: center;
+      .contain {
+        padding: 4rem 0;
+        .video_title {
+          margin-bottom: 1.5rem;
+
+          .tittle {
+            color: $text_color_w;
+            @include phone() {
+              font-size: $text_size-32px;
+            }
+            @include tittle();
+            .tittle_ball {
+              @include title_ball();
+              @include phone() {
+                width: 25px;
+                height: 25px;
+                left: -10px;
+                top: 5px;
+              }
+            }
+          }
+        }
+        iframe {
+          @include pc2() {
+            width: 880px;
+          }
+          @include pad() {
+            width: 760px;
+          }
+          @include pad2() {
+            width: 700px;
+          }
+          @include phone() {
+            width: 380px;
+            height: 300px;
+          }
+          @include phone2() {
+            width: 360px;
+          }
+        }
+      }
+    }
+
+    .box1 {
+      background-image: url(../img/share南子吝-4.jpg);
+    }
+    .box2 {
+      margin-top: 40rem;
+      background-image: url(../img/share太魯閣-2.jpg);
+    }
+  }
+}

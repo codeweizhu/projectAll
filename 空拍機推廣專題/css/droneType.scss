@@ -1,0 +1,427 @@
+@import "./public.scss";
+
+section {
+  width: 100%;
+}
+
+#droneType_bn {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../img/39dc3e04639d280bc0f0817a36040362.jpg);
+  background-position: center;
+  background-size: cover;
+
+  .text_box {
+    color: $text_color_g;
+    padding: 5% 0 0 3%;
+
+    .text_1 {
+      font: {
+        size: $text_size-48px;
+        weight: $text_weight-b;
+      }
+
+      @include phone() {
+        font-size: $text_size-32px;
+        color: $text_color_w;
+      }
+    }
+
+    .text_2 {
+      font: {
+        size: $text_size-32px;
+        weight: $text_weight-b;
+      }
+
+      @include phone() {
+        font-size: $text_size-18px;
+        color: $text_color_w;
+      }
+    }
+  }
+}
+
+.bn_text {
+  width: 80%;
+  height: 40vh;
+  background-image: url(../img/dji_fly_20230124_105622_463_1674529171801_photo_optimized.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 3rem auto;
+  border-radius: 15px;
+  position: relative;
+  top: -150px;
+  background-attachment: fixed;
+
+  @include pad() {
+    margin: 3rem auto 0 auto;
+  }
+
+  @include phone() {
+    width: 90%;
+    height: 400px;
+  }
+
+  p {
+    width: 80%;
+    line-height: 25px;
+    color: $text_color_w;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+    @include pad2() {
+      top: 15%;
+    }
+
+    @include phone() {
+      width: 90%;
+      top: 5%;
+      left: 5%;
+    }
+  }
+}
+
+#drone_type {
+  .drone_type_btn {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+
+    @include phone() {
+      width: 100%;
+    }
+
+    .btn {
+      width: 150px;
+      height: 50px;
+      background-image: $btn_bg;
+      color: $text_color_w;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 15px;
+      font-size: $text_size-18px;
+      transition: all 0.5s;
+      cursor: pointer;
+      transition: all .5s;
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: #f5f5f5;
+        top: 2px;
+        left: 2px;
+        border-radius: 12px;
+        width: 146px;
+        height: 46px;
+        transform: scale(0);
+        transition: all .3s;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scale(1);
+      }
+
+      &:hover {
+        color: #289DD2;
+      }
+
+      @include phone() {
+        width: 100px;
+        height: 33px;
+        line-height: 33px;
+        border-radius: 10px;
+        font-size: $text_size-16px;
+
+        &::before {
+          content: '';
+          border-radius: 7px;
+          width: 96px;
+          height: 29px;
+        }
+      }
+    }
+
+    .novice_btn {
+      background-image: linear-gradient(45deg, #193ee0 0%, #35bcfa 100%);
+    }
+  }
+
+  .active .drone_type_item{
+    margin-bottom: 450px
+  }
+
+  .active #text {
+    transform: translateY(0);
+  }
+
+  .footerActive #text {
+    transform: translateY(0);
+  }
+
+  .drone_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 5rem;
+
+    .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5rem;
+      align-items: center;
+      margin-top: 5rem;
+    }
+
+    .drone_type_item {
+      width: 80%;
+      height: 300px;
+      position: relative;
+      transition: all 0.5s;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        height: 350px;
+      }
+
+      // @include pad() {
+      //   width: 100%;
+      //   height: 350px;
+      // }
+
+      @include phone() {
+        margin-top: 325px;
+        height: 150px;
+      }
+
+      .img_mini2_se {
+        background-image: url(../img/mini2se.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .img_mini2 {
+        background-image: url(../img/mini2.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        @include phone() {
+          background-image: url(../img/mini2_m.jpg);
+        }
+      }
+
+      .img_mini3 {
+        background-image: url(../img/mini3.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        @include phone() {
+          background-image: url(../img/mini3.webp);
+        }
+      }
+
+      .img_mini3_pro {
+        background-image: url(../img/mini3pro.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .img_air2s {
+        background-image: url(../img/air2s.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        @include phone() {
+          background-image: url(../img/air2s_m.jpg);
+        }
+      }
+
+      .img_m3c {
+        background-image: url(../img/m3c.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .img_mv3p {
+        background-image: url(../img/mv3p.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        @include phone() {
+          background-image: url(../img/mav3pro_m.jpg);
+        }
+      }
+
+      .img_fpv {
+        background-image: url(../img/fpv.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .img_avata {
+        background-image: url(../img/avata.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        @include phone() {
+          background-image: url(../img/avata_m.jpg);
+        }
+      }
+
+      .box_2 {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+
+        @include phone() {
+          display: none;
+        }
+
+        .box_3 {
+          width: 25%;
+          height: 300px;
+          background-color: #f5f5f5;
+
+          @media (max-width: 1024px) {
+            height: 350px;
+          }
+
+          // @include pad() {
+          //   height: 350px;
+          // }
+        }
+
+        .box_4 {
+          width: 0;
+          height: 0;
+          border-top: 300px solid #96161600;
+          border-left: 300px solid #f5f5f5;
+
+          @media (max-width: 1024px) {
+            border-top: 350px solid #96161600;
+          }
+
+          // @include pad() {
+          //   border-top: 350px solid #96161600;
+          // }
+        }
+      }
+
+      .drone_text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35%;
+        padding: 1rem;
+        margin-top: 1.5rem;
+
+        @include pc() {
+          width: 38%;
+        }
+
+        @include pad() {
+          margin-top: 0;
+        }
+
+        @include phone() {
+          top: -325px;
+          width: 100%;
+        }
+
+        .type_title {
+          font: {
+            size: $text_size-32px;
+            weight: $text_weight-b;
+          }
+
+          @include pad() {
+            font-size: $text_size-28px;
+          }
+        }
+
+        p {
+          color: $text_color_g;
+          margin: 0.5rem 0;
+
+          @include pad() {
+            margin: 0.8rem 0;
+          }
+        }
+
+        .more_btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          @include pad() {
+            flex-direction: column-reverse;
+            align-items: start;
+          }
+
+          div {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: $text_color_w;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .more_text {
+      overflow: hidden;
+
+      div {
+        width: 100%;
+        height: 450px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $text_color_w;
+        line-height: 40px;
+        padding: 2rem;
+        transform: translateY(-550px);
+        transition: all 0.5s;
+
+        @include phone() {
+          line-height: 30px;
+          padding: 1rem;
+          font-size: $text_size-16px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  // margin-top: 450px;
+  transition: all .5s;
+}

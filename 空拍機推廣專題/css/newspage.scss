@@ -1,0 +1,223 @@
+@import "./public.scss";
+
+* {
+    color: $text_color_g;
+}
+
+section {
+    margin-top: 5rem;
+
+    @include phone() {
+        margin-top: 3rem;
+    }
+
+    .text_box {
+        margin-left: 20rem;
+
+        &>* {
+            margin-bottom: 1rem;
+        }
+
+        .news_type {
+            background-image: $btn_bg;
+            color: $text_color_w;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 15px;
+        }
+
+        .news_title {
+            font-size: $text_size-28px;
+            font-weight: $text_weight-b;
+
+            @include phone() {
+                font-size: $text_size-18px;
+            }
+        }
+
+        @include pad() {
+            margin-left: 6rem;
+        }
+
+        @include phone() {
+            margin-left: 3rem;
+        }
+    }
+
+    .news_item {
+        margin: auto;
+        width: 90%;
+        min-width: 800px;
+        height: 700px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        filter: blur(2.5px);
+        position: relative;
+        z-index: -1;
+
+        @include pad() {
+            min-width: 0;
+        }
+    }
+
+    .news_1 {
+        background-image: url(../img/reserve_img.jpg);
+    }
+
+    .news_2 {
+        background-image: url(../img/DJI_0323.jpg);
+    }
+
+    .news_4 {
+        background-image: url(../img/map.jpg);
+    }
+
+    .news_6 {
+        background-image: url(../img/news_DJI_0150.jpg);
+    }
+
+    .news_7 {
+        background-image: url(../img/news_DJI_0219.jpg);
+    }
+
+    .news_9 {
+        background-image: url(../img/news_mv3p.jpg);
+    }
+
+    .news_item_box {
+        width: 50%;
+        min-width: 600px;
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: white;
+        margin: -35rem auto 0rem auto;
+
+        @include phone() {
+            min-width: 0;
+            width: 80%;
+        }
+
+        .news_item_box_text {
+            line-height: 25px;
+
+            a {
+                text-decoration: underline;
+                color: rgb(57, 57, 236);
+            }
+        }
+
+        .no_link {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin: auto;
+            background-image: linear-gradient(45deg, #373838 0%, #a7a7a7 100%);
+            color: $text_color_w;
+            border-radius: 15px;
+            // transition: all .5s;
+            // position: relative;
+            // z-index: 0;
+            // display: block;
+        }
+
+        .link {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin: auto;
+            background-image: $btn_bg;
+            color: $text_color_w;
+            border-radius: 15px;
+            transition: all .5s;
+            position: relative;
+            z-index: 0;
+            display: block;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #ffffff;
+                top: 2px;
+                left: 2px;
+                border-radius: 12px;
+                width: 96px;
+                height: 36px;
+                transform: scale(0);
+                transition: all .3s;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+
+            &:hover {
+                color: #289DD2;
+            }
+
+            @include phone() {
+                margin: 1.2rem auto;
+            }
+        }
+
+        .img {
+            margin-top: 3rem;
+            text-align: center;
+
+            img {
+                border-radius: 15px;
+
+                @include phone() {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .to_news {
+        margin: 3rem auto;
+        text-align: center;
+        line-height: 40px;
+        width: 150px;
+        height: 40px;
+        background-image: $btn_bg;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover>a img {
+            animation: go_to_news .5s infinite alternate;
+
+            @keyframes go_to_news {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-10px);
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            div {
+                color: $text_color_w;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+footer {
+    @include phone() {
+        margin-top: 5rem;
+    }
+}

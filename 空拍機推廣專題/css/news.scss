@@ -1,0 +1,425 @@
+@import "./public.scss";
+
+#news_bn {
+    width: 100%;
+    height: 40vh;
+    background-image: url(../img/newspaper-g342480d10_1280.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .text_box {
+        color: $text_color_w;
+        padding: 5% 0 0 3%;
+
+        .text_1 {
+            font: {
+                size: $text_size-48px;
+                weight: $text_weight-b;
+            }
+
+            @include phone() {
+                font-size: $text_size-32px;
+            }
+        }
+
+        .text_2 {
+            margin: 10px 0;
+
+            font: {
+                size: $text_size-32px;
+                weight: $text_weight-b;
+            }
+
+            @include phone() {
+                font-size: $text_size-18px;
+            }
+        }
+    }
+}
+
+#news_section {
+
+    margin-bottom: 5rem;
+
+    .news_type_btn {
+        margin: 5rem auto;
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+
+        @include pad() {
+            width: 100%;
+        }
+
+        @include phone() {
+            flex-wrap: wrap;
+            margin: 3rem auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            background-image: $btn_bg;
+            color: $text_color_w;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 15px;
+            font-size: $text_size-18px;
+            transition: all 0.5s;
+            cursor: pointer;
+            transition: all .5s;
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #f5f5f5;
+                top: 2px;
+                left: 2px;
+                border-radius: 12px;
+                width: 146px;
+                height: 46px;
+                transform: scale(0);
+                transition: all .3s;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+
+            &:hover {
+                color: #289DD2;
+            }
+
+            @include phone() {
+                font-size: $text_size-16px;
+                margin: 1rem 0;
+            }
+        }
+
+        .all_btn {
+            background-image: linear-gradient(45deg, #193ee0 0%, #35bcfa 100%);
+        }
+    }
+
+    .content-wrapper {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    .news-card {
+        margin: 2rem 1rem;
+        position: relative;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        flex: 1;
+        min-width: 290px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 900px) {
+
+        .news-card {
+            height: 20rem
+        }
+    }
+
+    .news-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+        ;
+        z-index: 0;
+    }
+
+    .news-card__card-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .news-card__image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 1s ease;
+        backface-visibility: hidden;
+        position: relative;
+        z-index: -1;
+    }
+
+    .news-card__text-wrapper {
+        position: absolute;
+        bottom: 0rem;
+        padding: 1rem;
+        color: white;
+        transition: background-color .5s ease;
+        width: 100%;
+    }
+
+    .news-card__title {
+        transition: color .5s ease;
+        margin-bottom: .5rem;
+
+        @include phone() {
+            font-size: $text_size-18px;
+        }
+    }
+
+    .news-card__post-date {
+        font-size: 0.8rem;
+        margin-bottom: .5rem;
+        color: #CCC;
+    }
+
+    .news-card__details-wrapper {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 1s ease, opacity 1s ease;
+    }
+
+    @media (min-width: 900px) {
+        .news-card:hover .news-card__details-wrapper {
+            max-height: 20rem;
+            opacity: 1;
+        }
+
+        .news-card:hover .news-card__text-wrapper {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .news-card:hover .news-card__title {
+            color: #289DD2;
+        }
+
+        .news-card:hover .news-card__image {
+            transform: scale(1.2);
+            z-index: -1;
+        }
+    }
+
+    .news-card__excerpt {
+        font-weight: 300;
+        line-height: 25px;
+    }
+
+    .news-card__read-more {
+        background: black;
+        color: #bbb;
+        display: block;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.3rem;
+        margin-top: 1rem;
+        border: 1px solid #444;
+        font-size: 0.8rem;
+        backface-visibility: hidden;
+        text-decoration: none;
+        width: 7rem;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
+    }
+
+    .news-card__read-more i {
+        position: relative;
+        left: 0.2rem;
+        color: #888;
+        transition: left 0.5s ease, color 0.6s ease;
+        backface-visibility: hidden;
+    }
+
+    .news-card__read-more:hover i {
+        left: 0.5rem;
+        color: #289DD2;
+    }
+}
+
+footer {
+    background-color: $text_color_g;
+    border-radius: 300px 0 0 0;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+
+    @include phone() {
+        border-radius: 300px 300px 0 0;
+        margin-top: 5rem;
+    }
+
+    .footer_section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 350px;
+        border-bottom: 1px solid $web_bg;
+        background-image: url(../img/respic.jpg);
+        border-radius: 300px 0 0 0;
+
+        @include phone() {
+            border-radius: 300px 300px 0 0;
+        }
+
+        // 飛機css開始
+        .moveIn {
+            animation: moveIn 4s;
+            animation-iteration-count: 1;
+            // animation-delay: 1.5s;
+        }
+
+        .moveImg {
+            animation: fly-move 3s infinite alternate;
+            margin: 0;
+
+            @include phone() {
+                width: 300px;
+            }
+        }
+
+
+        @keyframes fly-move {
+            0% {
+                transform: rotate(0deg) translateX(10px) rotate(-0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(20px) rotate(-360deg);
+            }
+        }
+
+        @keyframes moveIn {
+            0% {
+                transform: translate(-500px, -500px);
+            }
+
+            50% {
+                transform: translate(-300px, -350px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+
+            // .moveImg {
+            //   margin-left: -5rem;
+            //   margin-bottom: 10rem;
+
+            //   @include phone() {
+            //     width: 350px;
+            //     margin-left: -2rem;
+            //   }
+            // }
+
+        }
+
+        // 飛機css結束
+
+
+        .footer_web_map {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: -10rem;
+            z-index: 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                background-color: #545454d0;
+                width: 100%;
+                height: 300px;
+                top: -20px;
+                left: 0;
+                position: absolute;
+                z-index: -1;
+                border-radius: 30px;
+            }
+
+            @include pad() {
+                display: none;
+            }
+
+            .web_map_item {
+                margin: 0.5rem 2rem;
+                text-align: center;
+                display: flex;
+
+                .web_map_title {
+                    width: 114px;
+                    text-align: start;
+                    position: relative;
+                    z-index: 0;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        background-color: $title_ball_bg;
+                        top: 3px;
+                        left: 5px;
+                        border-radius: 20px;
+                        z-index: -1;
+                    }
+                }
+
+                li {
+                    padding: 0.5rem 1rem;
+                    color: $text_color_w;
+                    transition: $transition_5ms;
+                    font-size: $text_size-16px;
+                }
+
+                a:hover li {
+                    background-color: $title_ball_bg;
+                }
+            }
+        }
+
+        .footer_logo {
+            margin-bottom: -19rem;
+
+            @include pad() {
+                display: none;
+            }
+        }
+    }
+
+    .copyright_section {
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+
+        @include phone() {
+            flex-direction: column-reverse;
+            height: 70px;
+        }
+
+        div {
+            color: $text_color_w;
+            margin-right: 3rem;
+
+            @include phone() {
+                font-size: 14px;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
