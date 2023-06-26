@@ -1,526 +1,475 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TravelDrone</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./css/public.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
-    />
-    <link rel="stylesheet" href="./css/indexNews.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelDrone</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <link rel="stylesheet" href="./css/indexNews.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
     <header>
-      <div id="logo">
-        <a href="index.html">
-          <img src="./img/logo_g.png" alt="logo" width="250px" />
-        </a>
-      </div>
-      <div id="nav_bar">
-        <ul>
-          <li class="nav_bar_item">
-            空拍景點
-            <ul class="drop_nav_bar">
-              <li class="drop_nav_bar_item">
-                <a href="./viewCommend.html">景點推薦</a>
-              </li>
-              <li class="drop_nav_bar_item">
-                <a href="./viewShare.html">景點分享</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav_bar_item">
-            認識空拍機
-            <ul class="drop_nav_bar">
-              <li class="drop_nav_bar_item">
-                <a href="./droneInt.html">空拍機介紹</a>
-              </li>
-              <li class="drop_nav_bar_item">
-                <a href="./droneOperate.html">基礎操作</a>
-              </li>
-              <li class="drop_nav_bar_item">
-                <a href="./droneType.html">機型介紹</a>
-              </li>
-              <li class="drop_nav_bar_item">
-                <a href="./lawR.html">空拍法規</a>
-              </li>
-              <li class="drop_nav_bar_item">
-                <a href="./appCom.html">APP推薦</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav_bar_item">
-            <a href="./reservation.html">預約專區</a>
-          </li>
-          <li class="nav_bar_item">
-            <a href="./news.html">最新消息</a>
-          </li>
-          <li class="nav_bar_item">
-            登入會員
-            <ul class="drop_nav_bar">
-              <li class="drop_nav_bar_item">
-                <a href="./login.html">登入頁面</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- 漢堡 -->
-      <div class="hamburger_box">
-        <div class="hamburger" id="hamburger-item">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./img/logo_g.png" alt="logo" width="250px">
+            </a>
         </div>
-      </div>
-      <!-- 漢堡nav -->
-      <div class="hamburger_nav">
-        <ul class="hamburger_nav_item">
-          <li class="hamburger_nav_title">空拍景點</li>
-          <a href="./viewCommend.html">
-            <li>景點推薦</li>
-          </a>
-          <a href="./viewShare.html">
-            <li>景點分享</li>
-          </a>
-        </ul>
-        <ul class="hamburger_nav_item">
-          <li class="hamburger_nav_title">認識空拍機</li>
-          <a href="./droneInt.html">
-            <li>空拍機介紹</li>
-          </a>
-          <a href="./droneOperate.html">
-            <li>基礎操作</li>
-          </a>
-          <a href="./droneType.html">
-            <li>機型介紹</li>
-          </a>
-          <a href="./lawR.html">
-            <li>空拍法規</li>
-          </a>
-          <a href="./appCom.html">
-            <li>APP推薦</li>
-          </a>
-        </ul>
-        <ul class="hamburger_nav_item">
-          <a href="./reservation.html">
-            <li class="hamburger_nav_title">預約專區</li>
-          </a>
-        </ul>
-        <ul class="hamburger_nav_item">
-          <a href="./news.html">
-            <li class="hamburger_nav_title">最新消息</li>
-          </a>
-        </ul>
-        <ul class="hamburger_nav_item">
-          <li class="hamburger_nav_title">登入會員</li>
-          <a href="./login.html">
-            <li>登入頁面</li>
-          </a>
-        </ul>
-      </div>
-      <!-- 漢堡結束 -->
+        <div id="nav_bar">
+            <ul>
+                <li class="nav_bar_item">空拍景點
+                    <ul class="drop_nav_bar">
+                        <li class="drop_nav_bar_item">
+                            <a href="./viewCommend.html">景點推薦</a>
+                        </li>
+                        <li class="drop_nav_bar_item">
+                            <a href="./viewShare.html">景點分享</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav_bar_item">認識空拍機
+                    <ul class="drop_nav_bar">
+                        <li class="drop_nav_bar_item">
+                            <a href="./droneInt.html">空拍機介紹</a>
+                        </li>
+                        <li class="drop_nav_bar_item">
+                            <a href="./droneOperate.html">基礎操作</a>
+                        </li>
+                        <li class="drop_nav_bar_item">
+                            <a href="./droneType.html">機型介紹</a>
+                        </li>
+                        <li class="drop_nav_bar_item">
+                            <a href="./lawR.html">空拍法規</a>
+                        </li>
+                        <li class="drop_nav_bar_item">
+                            <a href="./appCom.html">APP推薦</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav_bar_item">
+                    <a href="./reservation.html">預約專區</a>
+                </li>
+                <li class="nav_bar_item">
+                    <a href="./news.html">最新消息</a>
+                </li>
+                <li class="nav_bar_item">登入會員
+                    <ul class="drop_nav_bar">
+                        <li class="drop_nav_bar_item">
+                            <a href="./login.html">登入頁面</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- 漢堡 -->
+        <div class="hamburger_box">
+            <div class="hamburger" id="hamburger-item">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <!-- 漢堡nav -->
+        <div class="hamburger_nav">
+            <ul class="hamburger_nav_item">
+                <li class="hamburger_nav_title">空拍景點</li>
+                <a href="./viewCommend.html">
+                    <li>景點推薦</li>
+                </a>
+                <a href="./viewShare.html">
+                    <li>景點分享</li>
+                </a>
+            </ul>
+            <ul class="hamburger_nav_item">
+                <li class="hamburger_nav_title">認識空拍機</li>
+                <a href="./droneInt.html">
+                    <li>空拍機介紹</li>
+                </a>
+                <a href="./droneOperate.html">
+                    <li>基礎操作</li>
+                </a>
+                <a href="./droneType.html">
+                    <li>機型介紹</li>
+                </a>
+                <a href="./lawR.html">
+                    <li>空拍法規</li>
+                </a>
+                <a href="./appCom.html">
+                    <li>APP推薦</li>
+                </a>
+            </ul>
+            <ul class="hamburger_nav_item">
+                <a href="./reservation.html">
+                    <li class="hamburger_nav_title">預約專區</li>
+                </a>
+            </ul>
+            <ul class="hamburger_nav_item">
+                <a href="./news.html">
+                    <li class="hamburger_nav_title">最新消息</li>
+                </a>
+            </ul>
+            <ul class="hamburger_nav_item">
+                <li class="hamburger_nav_title">登入會員</li>
+                <a href="./login.html">
+                    <li>登入頁面</li>
+                </a>
+            </ul>
+        </div>
+        <!-- 漢堡結束 -->
     </header>
     <section id="video_section">
-      <video
-        src="./img/compose_video_1681645380829.mp4"
-        autoplay
-        muted
-        loop
-      ></video>
-      <div>
-        <div class="g_box"></div>
-        <div class="b_box"></div>
-        <div class="video_section_text_1">跟著我們</div>
-        <div class="video_section_text_2">從另一個角度看世界</div>
-      </div>
+        <video src="./img/compose_video_1681645380829.mp4" autoplay muted loop></video>
+        <div>
+            <div class="g_box"></div>
+            <div class="b_box"></div>
+            <div class="video_section_text_1">跟著我們</div>
+            <div class="video_section_text_2">從另一個角度看世界</div>
+        </div>
     </section>
     <section id="about_me">
-      <div class="about_me_text smoove">
-        <div class="tittle">
-          <div>關於我</div>
-          <div class="tittle_ball"></div>
+        <div class="about_me_text smoove "  data-move-x="-200px" data-move-y="200px">
+            <div class="tittle">
+                <div>關於我</div>
+                <div class="tittle_ball"></div>
+            </div>
+            <p class="about_text">空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常...</p>
+            <div class="more">More</div>
         </div>
-        <p class="about_text">
-          空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常...
-        </p>
-        <div class="more">More</div>
-      </div>
-      <div class="about_me_img smoove">
-        <img
-          class="img_1"
-          src="./img/dji_fly_20230123_114334_435_1674465717246_photo_optimized.jpg"
-          alt="img"
-          width="490px"
-        />
-        <img
-          class="img_2"
-          src="./img/dji_fly_20230317_060406_494_1679004451789_photo_optimized.jpg"
-          alt="img"
-          width="465px"
-          height="380px"
-        />
-        <img class="img_3" src="./img/DJI_0323.jpg" alt="img" width="565px" />
-      </div>
+        <div class="about_me_img smoove smoove-2" data-move-x="200px" data-move-y="200px">
+            <img class="img_1" src="./img/dji_fly_20230123_114334_435_1674465717246_photo_optimized.jpg" alt="img"
+                width="490px">
+            <img class="img_2" src="./img/dji_fly_20230317_060406_494_1679004451789_photo_optimized.jpg" alt="img"
+                width="465px" height="380px">
+            <img class="img_3" src="./img/DJI_0323.jpg" alt="img" width="565px">
+        </div>
     </section>
     <section id="attractions">
-      <div class="tittle">
-        <div>景點推薦</div>
-        <div class="tittle_ball"></div>
-      </div>
-      <a href="./com_taidon.html" class="attractions_item item_1 smoove">
-        <div class="img_Taitung"></div>
-        <div class="box_2">
-          <div class="box_3"></div>
-          <div class="box_4"></div>
+        <div class="tittle">
+            <div>景點推薦</div>
+            <div class="tittle_ball"></div>
         </div>
-        <p>台東<br />　池上</p>
-      </a>
-      <a href="./com_hualien.html" class="attractions_item item_2 smoove">
-        <div class="img_Hualien"></div>
-        <div class="box_2">
-          <div class="box_3"></div>
-          <div class="box_4"></div>
-        </div>
-        <p>花蓮<br />　清水斷崖</p>
-      </a>
-      <a href="./com_ nantou.html" class="attractions_item item_3 smoove">
-        <div class="img_Nantou"></div>
-        <div class="box_2">
-          <div class="box_3"></div>
-          <div class="box_4"></div>
-        </div>
-        <p>南投<br />　合歡山</p>
-      </a>
+        <a href="./com_taidon.html" class="attractions_item item_1 smoove "  data-move-x="-200px" data-move-y="200px">
+            <div class="img_Taitung"></div>
+            <div class="box_2">
+                <div class="box_3"></div>
+                <div class="box_4"></div>
+            </div>
+            <p>台東<br>　池上</p>
+        </a>
+        <a href="./com_hualien.html" class="attractions_item  item_2 smoove "  data-move-x="-200px" data-move-y="200px">
+            <div class="img_Hualien"></div>
+            <div class="box_2">
+                <div class="box_3"></div>
+                <div class="box_4"></div>
+            </div>
+            <p>花蓮<br>　清水斷崖</p>
+        </a>
+        <a href="./com_ nantou.html" class="attractions_item  item_3 smoove "  data-move-x="-200px" data-move-y="200px">
+            <div class="img_Nantou"></div>
+            <div class="box_2">
+                <div class="box_3"></div>
+                <div class="box_4"></div>
+            </div>
+            <p>南投<br>　合歡山</p>
+        </a>
     </section>
     <section id="news">
-      <div class="about_me_text">
-        <div class="tittle">
-          <div>最新消息</div>
-          <div class="tittle_ball"></div>
-        </div>
-        <div class="blog-slider smoove">
-          <div class="blog-slider__wrp swiper-wrapper">
-            <div class="blog-slider__item swiper-slide">
-              <div class="blog-slider__img">
-                <img src="./img/reserve_img.jpg" alt="" />
-              </div>
-              <div class="blog-slider__content">
-                <span class="blog-slider__code">2023/7/7(五)</span>
-                <div class="blog-slider__title">7月空拍體驗課程(2)</div>
-                <div class="blog-slider__text">
-                  7月份最後一場空拍體驗課程可以開始預約了，想加入空拍的朋友們還在擔心空拍機不好操控或是不知道該如何操作嗎?<br />快來參加免費體驗課程由我們帶領你進入空拍的世界~
-                </div>
-                <a href="./newspage_1.html" class="blog-slider__button"
-                  >READ MORE</a
-                >
-              </div>
+        <div class="about_me_text">
+            <div class="tittle">
+                <div>最新消息</div>
+                <div class="tittle_ball"></div>
             </div>
-            <div class="blog-slider__item swiper-slide">
-              <div class="blog-slider__img">
-                <img src="./img/DJI_0323.jpg" alt="" />
-              </div>
-              <div class="blog-slider__content">
-                <span class="blog-slider__code">2023/6/19(一)</span>
-                <div class="blog-slider__title">精選景點-花蓮清水斷崖</div>
-                <div class="blog-slider__text">
-                  炎炎夏日最適合到海邊消暑，本次新增精選景點為花蓮的清水斷崖，這裡除了可以體驗各項水上活動外也是個適合用空拍機拍攝的景點，但這裡屬於太魯閣國家公園區域，拍攝前請記得到太魯閣國家公園申請拍攝。
+            <div class="blog-slider smoove smoove-2" data-move-x="200px" data-move-y="200px">
+                <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+
+                            <img src="./img/reserve_img.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2023/7/7(五)</span>
+                            <div class="blog-slider__title">7月空拍體驗課程(2)</div>
+                            <div class="blog-slider__text">
+                                7月份最後一場空拍體驗課程可以開始預約了，想加入空拍的朋友們還在擔心空拍機不好操控或是不知道該如何操作嗎?<br>快來參加免費體驗課程由我們帶領你進入空拍的世界~</div>
+                            <a href="./newspage_1.html" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="./img/DJI_0323.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2023/6/19(一)</span>
+                            <div class="blog-slider__title">精選景點-花蓮清水斷崖</div>
+                            <div class="blog-slider__text">
+                                炎炎夏日最適合到海邊消暑，本次新增精選景點為花蓮的清水斷崖，這裡除了可以體驗各項水上活動外也是個適合用空拍機拍攝的景點，但這裡屬於太魯閣國家公園區域，拍攝前請記得到太魯閣國家公園申請拍攝。
+                            </div>
+                            <a href="./newspage_2.html" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="./img/reserve_img.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2023/6/15(四)</span>
+                            <div class="blog-slider__title">7月空拍體驗課程(1)</div>
+                            <div class="blog-slider__text">
+                                7月份第一場空拍體驗課程開始預約囉，想加入空拍的朋友們還在擔心空拍機不好操控或是不知道該如何操作嗎?<br>快來參加免費體驗課程由我們帶領你進入空拍的世界~</div>
+                            <a href="./newspage_3.html" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="./img/map.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2023/6/12(一)</span>
+                            <div class="blog-slider__title">景點查詢地圖上線</div>
+                            <div class="blog-slider__text">買了空拍機還不知道可以去哪裡拍嗎?
+                                現在景點查詢地圖上線囉，只要透過景點查詢地圖就可以瀏覽台灣可空拍景點並顯示景點是否需要申請等空拍資訊。
+                            </div>
+                            <a href="./newspage_4.html" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+
                 </div>
-                <a href="./newspage_2.html" class="blog-slider__button"
-                  >READ MORE</a
-                >
-              </div>
+                <div class="blog-slider__pagination"></div>
             </div>
-            <div class="blog-slider__item swiper-slide">
-              <div class="blog-slider__img">
-                <img src="./img/reserve_img.jpg" alt="" />
-              </div>
-              <div class="blog-slider__content">
-                <span class="blog-slider__code">2023/6/15(四)</span>
-                <div class="blog-slider__title">7月空拍體驗課程(1)</div>
-                <div class="blog-slider__text">
-                  7月份第一場空拍體驗課程開始預約囉，想加入空拍的朋友們還在擔心空拍機不好操控或是不知道該如何操作嗎?<br />快來參加免費體驗課程由我們帶領你進入空拍的世界~
-                </div>
-                <a href="./newspage_3.html" class="blog-slider__button"
-                  >READ MORE</a
-                >
-              </div>
-            </div>
-            <div class="blog-slider__item swiper-slide">
-              <div class="blog-slider__img">
-                <img src="./img/map.jpg" alt="" />
-              </div>
-              <div class="blog-slider__content">
-                <span class="blog-slider__code">2023/6/12(一)</span>
-                <div class="blog-slider__title">景點查詢地圖上線</div>
-                <div class="blog-slider__text">
-                  買了空拍機還不知道可以去哪裡拍嗎?
-                  現在景點查詢地圖上線囉，只要透過景點查詢地圖就可以瀏覽台灣可空拍景點並顯示景點是否需要申請等空拍資訊。
-                </div>
-                <a href="./newspage_4.html" class="blog-slider__button"
-                  >READ MORE</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="blog-slider__pagination"></div>
-        </div>
-      </div>
     </section>
     <section id="reserve">
-      <div class="tittle">
-        <div>預約專區</div>
-        <div class="tittle_ball"></div>
-      </div>
-      <div class="reserve_section smoove">
-        <div class="reserve_img"></div>
-        <div class="reserve_box">
-          <div class="reserve_item item_1">
-            <a href="./expWeb_729.html">
-              <div class="reserve_item_img">
-                <img src="./img/reserve_img.jpg" alt="img" width="200px" />
-              </div>
-              <div class="reserve_item_box">
-                <div>
-                  <div>日期:2023/7/29(六)</div>
-                  <div>時間:上午9點</div>
-                  <div>地點：台北-福德坑環保復育公園停車場</div>
-                </div>
-                <div class="reserve_item_btn">
-                  <img src="./img/sport.svg" alt="img" width="40px" />
-                  <div>點我報名體驗課程!</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="reserve_item">
-            <a href="./expWeb_708.html">
-              <div class="reserve_item_img">
-                <img src="./img/reserve_img.jpg" alt="img" width="200px" />
-              </div>
-              <div class="reserve_item_box">
-                <div>
-                  <div>日期:2023/7/8(六)</div>
-                  <div>時間:上午9點</div>
-                  <div>地點：台北-福德坑環保復育公園停車場</div>
-                </div>
-                <div class="reserve_item_btn">
-                  <img src="./img/sport.svg" alt="img" width="40px" />
-                  <div>點我報名體驗課程!</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="reserve_item item_2">
-            <a href="./expWeb_625.html">
-              <div class="reserve_item_img">
-                <img src="./img/reserve_img.jpg" alt="img" width="200px" />
-              </div>
-              <div class="reserve_item_box">
-                <div>
-                  <div>日期:2023/6/25(日)</div>
-                  <div>時間:上午9點</div>
-                  <div>地點：台北-福德坑環保復育公園停車場</div>
-                </div>
-                <div class="reserve_item_btn">
-                  <img src="./img/sport.svg" alt="img" width="40px" />
-                  <div>點我報名體驗課程!</div>
-                </div>
-              </div>
-            </a>
-          </div>
+        <div class="tittle">
+            <div>預約專區</div>
+            <div class="tittle_ball"></div>
         </div>
-      </div>
+        <div class="reserve_section  smoove "  data-move-x="-200px" data-move-y="200px">
+            <div class="reserve_img"></div>
+            <div class="reserve_box">
+                <div class="reserve_item item_1">
+                    <a href="./expWeb_729.html">
+                        <div class="reserve_item_img">
+                            <img src="./img/reserve_img.jpg" alt="img" width="200px">
+                        </div>
+                        <div class="reserve_item_box">
+                            <div>
+                                <div>日期:2023/7/29(六)</div>
+                                <div>時間:上午9點</div>
+                                <div>地點：台北-福德坑環保復育公園停車場</div>
+                            </div>
+                            <div class="reserve_item_btn">
+                                <img src="./img/sport.svg" alt="img" width="40px">
+                                <div>點我報名體驗課程!</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="reserve_item">
+                    <a href="./expWeb_708.html">
+                        <div class="reserve_item_img">
+                            <img src="./img/reserve_img.jpg" alt="img" width="200px">
+                        </div>
+                        <div class="reserve_item_box">
+                            <div>
+                                <div>日期:2023/7/8(六)</div>
+                                <div>時間:上午9點</div>
+                                <div>地點：台北-福德坑環保復育公園停車場</div>
+                            </div>
+                            <div class="reserve_item_btn">
+                                <img src="./img/sport.svg" alt="img" width="40px">
+                                <div>點我報名體驗課程!</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="reserve_item  item_2">
+                    <a href="./expWeb_625.html">
+                        <div class="reserve_item_img">
+                            <img src="./img/reserve_img.jpg" alt="img" width="200px">
+                        </div>
+                        <div class="reserve_item_box">
+                            <div>
+                                <div>日期:2023/6/25(日)</div>
+                                <div>時間:上午9點</div>
+                                <div>地點：台北-福德坑環保復育公園停車場</div>
+                            </div>
+                            <div class="reserve_item_btn">
+                                <img src="./img/sport.svg" alt="img" width="40px">
+                                <div>點我報名體驗課程!</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
     </section>
     <footer>
-      <div class="footer_section">
-        <div id="movePic">
-          <img class="moveImg" src="./img/001.png" alt="drone" width="670px" />
+        <div class="footer_section">
+            <div id="movePic">
+                <img class="moveImg" src="./img/001.png" alt="drone" width="670px" />
+            </div>
+            <div class="footer_web_map">
+                <ul class="web_map_item">
+                    <li class="web_map_title">空拍景點</li>
+                    <a href="./viewCommend.html">
+                        <li>景點推薦</li>
+                    </a>
+                    <a href="./viewShare.html">
+                        <li>景點分享</li>
+                    </a>
+                </ul>
+                <ul class="web_map_item">
+                    <li class="web_map_title">認識空拍機</li>
+                    <a href="./droneInt.html">
+                        <li>空拍機介紹</li>
+                    </a>
+                    <a href="./droneOperate.html">
+                        <li>基礎操作</li>
+                    </a>
+                    <a href="./droneType.html">
+                        <li>機型介紹</li>
+                    </a>
+                    <a href="./lawR.html">
+                        <li>空拍法規</li>
+                    </a>
+                    <a href="./appCom.html">
+                        <li>APP推薦</li>
+                    </a>
+                </ul>
+                <ul class="web_map_item">
+                    <a href="./reservation.html">
+                        <li class="web_map_title">預約專區</li>
+                    </a>
+                </ul>
+                <ul class="web_map_item">
+                    <a href="./news.html">
+                        <li class="web_map_title">最新消息</li>
+                    </a>
+                </ul>
+                <ul class="web_map_item">
+                    <li class="web_map_title">登入會員</li>
+                    <a href="./login.html">
+                        <li>登入頁面</li>
+                    </a>
+                </ul>
+            </div>
         </div>
-        <div class="footer_web_map">
-          <ul class="web_map_item">
-            <li class="web_map_title">空拍景點</li>
-            <a href="./viewCommend.html">
-              <li>景點推薦</li>
+        <div class="copyright_section">
+            <div>copyright © TravelDrone 版權所有</div>
+            <a href="index.html" class="footer_logo">
+                <img src="./img/logo_w.png" alt="logo" width="150px">
             </a>
-            <a href="./viewShare.html">
-              <li>景點分享</li>
-            </a>
-          </ul>
-          <ul class="web_map_item">
-            <li class="web_map_title">認識空拍機</li>
-            <a href="./droneInt.html">
-              <li>空拍機介紹</li>
-            </a>
-            <a href="./droneOperate.html">
-              <li>基礎操作</li>
-            </a>
-            <a href="./droneType.html">
-              <li>機型介紹</li>
-            </a>
-            <a href="./lawR.html">
-              <li>空拍法規</li>
-            </a>
-            <a href="./appCom.html">
-              <li>APP推薦</li>
-            </a>
-          </ul>
-          <ul class="web_map_item">
-            <a href="./reservation.html">
-              <li class="web_map_title">預約專區</li>
-            </a>
-          </ul>
-          <ul class="web_map_item">
-            <a href="./news.html">
-              <li class="web_map_title">最新消息</li>
-            </a>
-          </ul>
-          <ul class="web_map_item">
-            <li class="web_map_title">登入會員</li>
-            <a href="./login.html">
-              <li>登入頁面</li>
-            </a>
-          </ul>
         </div>
-      </div>
-      <div class="copyright_section">
-        <div>copyright © TravelDrone 版權所有</div>
-        <a href="index.html" class="footer_logo">
-          <img src="./img/logo_w.png" alt="logo" width="150px" />
-        </a>
-      </div>
     </footer>
 
-    <script src="./js/jquery-1.11.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script src="./js/indexNews.js"></script>
     <script>
-      $(function () {
-        $("body").append(
-          '<a href="#" id="fixedTop" class="go_top"><img src="./img/to-top.svg" alt=""></a>'
-        );
-        let fixedTop = $("#fixedTop");
-        fixedTop.on("click", function () {
-          $("html, body").animate({ scrollTop: "0" }, 1000);
+        $(function () {
+            $('body').append('<a href="#" id="fixedTop" class="go_top"><img src="./img/to-top.svg" alt=""></a>');
+            let fixedTop = $('#fixedTop')
+            fixedTop.on('click', function () {
+                $('html, body').animate({ scrollTop: '0' }, 1000);
+            });
+            $(window).on('load scroll resize', function () {
+                let showTop = 100;
+                let curScrollTop = $(window).scrollTop();
+
+                if (curScrollTop > showTop) {
+                    fixedTop.fadeIn('false');
+                } else {
+                    fixedTop.fadeOut('false');
+                }
+            });
         });
-        $(window).on("load scroll resize", function () {
-          let showTop = 100;
-          let curScrollTop = $(window).scrollTop();
 
-          if (curScrollTop > showTop) {
-            fixedTop.fadeIn("false");
-          } else {
-            fixedTop.fadeOut("false");
-          }
+        // smoove 
+        $('.smoove').smoove({
+            offset: '30%',
         });
-      });
 
-      // smoove
-      $(".smoove").smoove({
-        offset: "30%",
-        moveX: "-200px",
-        moveY: "200px",
-      });
+        // about
+        $('.more').click(() => {
+            let aboutText = $('.about_text');
+            let more = $('.more');
+            let moreText = '空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常...';
+            let closeText = '空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常看到許多人想加入空拍的行列但卻不得其門而入，甚至是不了解空拍法規導致違規飛行。所以我們想設計出一個介紹空拍機及台灣空拍景點的網站，讓想加入空拍的人有個網站可以了解到關於空拍機的相關資訊及空拍景點，並能透過投稿與大家分享空拍景點，讓大家跟我們一起從另一個角度看世界。';
 
-      // $('.smoove-1').smoove({
-      //     moveX: '-200px',
-      //     moveY: '200px',
-      // });
-
-      // $('.smoove-2').smoove({
-      //     moveX: '200px',
-      //     moveY: '200px',
-      // });
-
-      // about
-      $(".more").click(() => {
-        let aboutText = $(".about_text");
-        let more = $(".more");
-        let moreText =
-          "空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常...";
-        let closeText =
-          "空拍機及無人機這個名詞一直出現在我們的生活中，不管是節日中的無人機表演或是在新聞中看到用於戰爭上，這個名詞對於一般人彷彿很接近卻又很遙遠，網路上也常看到許多人想加入空拍的行列但卻不得其門而入，甚至是不了解空拍法規導致違規飛行。所以我們想設計出一個介紹空拍機及台灣空拍景點的網站，讓想加入空拍的人有個網站可以了解到關於空拍機的相關資訊及空拍景點，並能透過投稿與大家分享空拍景點，讓大家跟我們一起從另一個角度看世界。";
-
-        if (aboutText.hasClass("active")) {
-          aboutText.removeClass(
-            "active",
-            aboutText.html(moreText),
-            more.html("More")
-          );
-        } else {
-          aboutText.html(
-            closeText,
-            more.html("Close"),
-            aboutText.toggleClass("active")
-          );
-        }
-      });
-
-      // 漢堡
-      $(document).ready(function () {
-        $(".hamburger").click(function () {
-          $(this).toggleClass("is-active");
+            if (aboutText.hasClass('active')) {
+                aboutText.removeClass('active', aboutText.html(moreText), more.html('More'));
+            } else {
+                aboutText.html(closeText, more.html('Close'), aboutText.toggleClass("active"));
+            }
         });
-      });
 
-      // 漢堡nav
-      let hb = document.querySelector(".hamburger_box");
-      let hn = document.querySelector(".hamburger_nav");
+        // 漢堡
+        $(document).ready(function () {
+            $(".hamburger").click(function () {
+                $(this).toggleClass("is-active");
+            });
+        });
 
-      hb.onclick = () => {
-        if (hn.style.transform == "translateY(0px)") {
-          hn.style.transform = "translateY(-1500px)";
-        } else {
-          hn.style.transform = "translateY(0px)";
+        // 漢堡nav
+        let hb = document.querySelector('.hamburger_box');
+        let hn = document.querySelector('.hamburger_nav');
+
+        hb.onclick = () => {
+            if (hn.style.transform == 'translateY(0px)') {
+                hn.style.transform = 'translateY(-1500px)';
+            } else {
+                hn.style.transform = 'translateY(0px)';
+            }
         }
-      };
-      // 漢堡結束
+        // 漢堡結束
 
-      // 飛機動畫開始
-      let movePic = document.querySelector("#movePic");
-      let lockPos = document.querySelector("#lockPos");
+        // 飛機動畫開始
+        let movePic = document.querySelector("#movePic");
+        let lockPos = document.querySelector("#lockPos");
 
-      window.addEventListener("scroll", checkMove);
-      checkMove();
+        window.addEventListener("scroll", checkMove);
+        checkMove();
 
-      function checkMove() {
-        console.log(window.scrollY); //852
+        function checkMove() {
+            console.log(window.scrollY); //852
 
-        if (window.scrollY > 2800) {
-          document.querySelector("#movePic").classList.add("moveIn");
-        } else {
-          document.querySelector("#movePic").classList.remove("moveIn");
+            if (window.scrollY > 2800) {
+                document.querySelector("#movePic").classList.add("moveIn");
+            } else {
+                document.querySelector("#movePic").classList.remove("moveIn");
+            }
         }
-      }
 
-      // window.onscroll = function () {
-      //   myFunction();
-      // };
+                // window.onscroll = function () {
+        //   myFunction();
+        // };
 
-      // function myFunction() {
-      //   if (
-      //     document.body.scrollTop > 1300 ||
-      //     document.documentElement.scrollTop > 1300
-      //   ) {
-      //     document.getElementById("test").className = "moveIn";
-      //   } else {
-      //     document.getElementById("test").className = "";
-      //   }
-      // }
+        // function myFunction() {
+        //   if (
+        //     document.body.scrollTop > 1300 ||
+        //     document.documentElement.scrollTop > 1300
+        //   ) {
+        //     document.getElementById("test").className = "moveIn";
+        //   } else {
+        //     document.getElementById("test").className = "";
+        //   }
+        // }
 
-      // 飛機動畫結束
+        // 飛機動畫結束
     </script>
-  </body>
+</body>
+
 </html>
