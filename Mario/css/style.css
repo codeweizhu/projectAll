@@ -222,8 +222,6 @@ header #opcaUl {
   header .phoneBar .bg ul a .colorH:hover {
     color: blue;
   }
-}
-@media (max-width: 768px) {
   header .phoneBar .bg ul a .colorH img {
     width: 40px;
     height: 40px;
