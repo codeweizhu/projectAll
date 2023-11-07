@@ -1,0 +1,2 @@
+1.remove jsanimate
+2. add hidden
